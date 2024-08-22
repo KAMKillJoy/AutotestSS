@@ -28,6 +28,7 @@ class StudentRegistrationFormLocators:
     LOCATOR_CITY_OPTION = (By.XPATH, "//*[@id='city']/div[2]/div/div[text()='{}']")
     LOCATOR_SUBMIT_BUTTON = (By.CSS_SELECTOR, "#submit")
 
+    LOCATOR_RESULT_MODAL_TABLE = (By.XPATH, '/html/body/div[4]/div/div')
     LOCATOR_RESULT_MODAL_TITLE = (By.XPATH, '// *[ @ id = "example-modal-sizes-title-lg"]')
     LOCATOR_RESULT_MODAL_STUDENT_NAME = (By.XPATH, '/html/body/div[4]/div/div/div[2]/div/table/tbody/tr[1]/td[2]')
     LOCATOR_RESULT_MODAL_STUDENT_EMAIL = (By.XPATH, '/html/body/div[4]/div/div/div[2]/div/table/tbody/tr[2]/td[2]')
@@ -97,6 +98,11 @@ class StudentRegistrationFormMethods(BasePage):
 
     def click_submit(self):
         self.find_element(StudentRegistrationFormLocators.LOCATOR_SUBMIT_BUTTON).click()
+
+
+
+    def check_modal_result(self):
+        return self.check_exists(*StudentRegistrationFormLocators.LOCATOR_RESULT_MODAL_TABLE)
 
     def read_result_modal_title(self):
         return self.read_element(self.find_element
