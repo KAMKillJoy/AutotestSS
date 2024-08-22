@@ -1,3 +1,4 @@
+from selenium.common import NoSuchElementException
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -21,3 +22,10 @@ class BasePage:
 
     def read_element(self, element):
         return element.text
+
+    def check_exists(self, by, locator):
+        try:
+            self.driver.find_element(by, locator)
+        except NoSuchElementException:
+            return False
+        return True
