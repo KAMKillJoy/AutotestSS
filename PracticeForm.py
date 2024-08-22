@@ -99,33 +99,34 @@ class StudentRegistrationFormMethods(BasePage):
         self.find_element(StudentRegistrationFormLocators.LOCATOR_SUBMIT_BUTTON).click()
 
     def read_result_modal_title(self):
-        self.read_element(self.find_element(StudentRegistrationFormLocators.LOCATOR_RESULT_MODAL_TITLE))
+        return self.read_element(self.find_element(StudentRegistrationFormLocators.LOCATOR_RESULT_MODAL_TITLE))
 
     def read_result_modal_student_name(self):
+        return self.read_element(self.find_element(StudentRegistrationFormLocators.LOCATOR_RESULT_MODAL_STUDENT_NAME))
 
     def read_result_modal_student_email(self):
-        self.read_element(StudentRegistrationFormLocators.LOCATOR_RESULT_MODAL_STUDENT_EMAIL)
+        return self.read_element(StudentRegistrationFormLocators.LOCATOR_RESULT_MODAL_STUDENT_EMAIL)
 
     def read_result_modal_student_gender(self):
-        self.read_element(StudentRegistrationFormLocators.LOCATOR_RESULT_MODAL_STUDENT_GENDER)
+        return self.read_element(StudentRegistrationFormLocators.LOCATOR_RESULT_MODAL_STUDENT_GENDER)
 
     def read_result_modal_student_mobile(self):
-        self.read_element(StudentRegistrationFormLocators.LOCATOR_RESULT_MODAL_STUDENT_MOBILE)
+        return self.read_element(StudentRegistrationFormLocators.LOCATOR_RESULT_MODAL_STUDENT_MOBILE)
 
     def read_result_modal_student_date_of_birth(self):
-        self.read_element(StudentRegistrationFormLocators.LOCATOR_RESULT_MODAL_STUDENT_DATE_OF_BIRTH)
+        return self.read_element(StudentRegistrationFormLocators.LOCATOR_RESULT_MODAL_STUDENT_DATE_OF_BIRTH)
 
     def read_result_modal_student_subjects(self):
-        self.read_element(StudentRegistrationFormLocators.LOCATOR_RESULT_MODAL_STUDENT_SUBJECTS)
+        return self.read_element(StudentRegistrationFormLocators.LOCATOR_RESULT_MODAL_STUDENT_SUBJECTS)
 
     def read_result_modal_student_hobbies(self):
-        self.read_element(StudentRegistrationFormLocators.LOCATOR_RESULT_MODAL_STUDENT_HOBBIES)
+        return self.read_element(StudentRegistrationFormLocators.LOCATOR_RESULT_MODAL_STUDENT_HOBBIES)
 
     def read_result_modal_student_picture(self):
-        self.read_element(StudentRegistrationFormLocators.LOCATOR_RESULT_MODAL_STUDENT_PICTURE)
+        return self.read_element(StudentRegistrationFormLocators.LOCATOR_RESULT_MODAL_STUDENT_PICTURE)
 
     def read_result_modal_student_address(self):
-        self.read_element(StudentRegistrationFormLocators.LOCATOR_RESULT_MODAL_STUDENT_ADDRESS)
+        return self.read_element(StudentRegistrationFormLocators.LOCATOR_RESULT_MODAL_STUDENT_ADDRESS)
 
     def read_result_modal_state_and_city(self):
-        self.read_element(StudentRegistrationFormLocators.LOCATOR_RESULT_MODAL_STUDENT_STATE_AND_CITY)
+        return self.read_element(StudentRegistrationFormLocators.LOCATOR_RESULT_MODAL_STUDENT_STATE_AND_CITY)
