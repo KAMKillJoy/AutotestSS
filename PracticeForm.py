@@ -102,7 +102,6 @@ class StudentRegistrationFormMethods(BasePage):
         self.read_element(self.find_element(StudentRegistrationFormLocators.LOCATOR_RESULT_MODAL_TITLE))
 
     def read_result_modal_student_name(self):
-        self.read_element(self.find_element(StudentRegistrationFormLocators.LOCATOR_RESULT_MODAL_STUDENT_NAME))
 
     def read_result_modal_student_email(self):
         self.read_element(StudentRegistrationFormLocators.LOCATOR_RESULT_MODAL_STUDENT_EMAIL)
