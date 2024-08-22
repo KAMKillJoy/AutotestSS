@@ -19,6 +19,7 @@ def test_student_registration_form(browser):
     student_registration_form.enter_city(Students.StudentVasia["city"])
     student_registration_form.click_submit()
 
+    assert student_registration_form.check_modal_result()
     assert (student_registration_form.read_result_modal_student_name().casefold() ==
             f"{Students.StudentVasia["firstname"]} {Students.StudentVasia["lastname"]}".casefold())
     assert (student_registration_form.read_result_modal_student_email().casefold() ==
