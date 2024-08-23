@@ -74,9 +74,9 @@ class StudentRegistrationFormMethods(BasePage):
         self.find_element(tuple((StudentRegistrationFormLocators.LOCATOR_CALENDAR_DAY_PICK[0],
                                  StudentRegistrationFormLocators.LOCATOR_CALENDAR_DAY_PICK[1].format(day)))).click()
 
-    def enter_subjects(self, subject):
-        for i in subject:
-            self.find_element(StudentRegistrationFormLocators.LOCATOR_SUBJECT_TEXTFIELD).send_keys(i)
+    def enter_subjects(self, subjects):
+        for subject in subjects:
+            self.find_element(StudentRegistrationFormLocators.LOCATOR_SUBJECT_TEXTFIELD).send_keys(subject)
             self.find_element(StudentRegistrationFormLocators.LOCATOR_SUBJECT_TEXTFIELD).send_keys(Keys.RETURN)
 
     def upload_picture(self, picture):
